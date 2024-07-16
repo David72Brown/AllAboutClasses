@@ -17,7 +17,7 @@ cAnimal::cAnimal(const char* pNewName, unsigned int NewAge)
 	// _strdup() (short for "string duplication") is a library function which allocates new memory
 	// and copies the string pointed to by the pNewName pointer into the newly allocated memory.
 	pName = _strdup(pNewName);
-	this->Age = NewAge;
+	Age = NewAge;
 }
 
 // Destructor.

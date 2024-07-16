@@ -7,18 +7,15 @@ using namespace std;
 void TestPeople(void)
 {
     cPerson Johnathan("Johnny", 51);
-    cPerson Michael;
+    cPerson Jill;
     cPerson William("Bill", 53);
 
-    Michael = Johnathan;
+    Jill = William;
 
-    cPerson Jill(William);
     Jill.SetInitial('J');
 
     cout << "Johnathan: ";
     Johnathan.OutputDetails();
-    cout << "Michael:   ";
-    Michael.OutputDetails();
     cout << "William:   ";
     William.OutputDetails();
     cout << "Jill:      ";
@@ -29,18 +26,14 @@ void TestPeople(void)
 void TestAnimals(void)
 {
     cAnimal Dog("Rex", 3);
-    cAnimal Mouse("Nibbles", 1);
+    cAnimal Rat;
     cAnimal Cat("Catty", 2);
 
-    Mouse = Dog;
-
-    cAnimal Rat(Cat);
+    Rat = Cat;
     Rat.SetInitial('R');
 
     cout << "Dog:      ";
     Dog.OutputDetails();
-    cout << "Mouse:    ";
-    Mouse.OutputDetails();
     cout << "Cat:      ";
     Cat.OutputDetails();
     cout << "Rat:      ";
