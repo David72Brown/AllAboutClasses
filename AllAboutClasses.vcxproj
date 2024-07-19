@@ -141,11 +141,13 @@
   <ItemGroup>
     <ClCompile Include="AllAboutClasses.cpp" />
     <ClCompile Include="cAnimal.cpp" />
+    <ClCompile Include="cCar.cpp" />
     <ClCompile Include="cPerson.cpp" />
     <ClCompile Include="cVehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cAnimal.h" />
+    <ClInclude Include="cCar.h" />
     <ClInclude Include="cPerson.h" />
     <ClInclude Include="cVehicle.h" />
   </ItemGroup>

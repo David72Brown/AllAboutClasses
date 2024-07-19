@@ -79,3 +79,8 @@ void cVehicle::operator=(cVehicle& Original)
 	pName = _strdup(Original.pName);
 	Age = Original.Age;
 }
+
+void cVehicle::StartMoving(void)
+{
+	// Do nothing - there is no generic cVehicle version of this function.
+}

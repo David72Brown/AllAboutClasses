@@ -2,6 +2,7 @@
 #include "cPerson.h"
 #include "cAnimal.h"
 #include "cVehicle.h"
+#include "cCar.h"
 using namespace std;
 
 void TestPeople(void)
@@ -63,9 +64,18 @@ void TestVehicles(void)
     cout << endl;
 }
 
+void TestCars(void)
+{
+    cCar Car1 ("Touran", 5, "Volkswagen", 100);
+    Car1.SetInitial('Z');
+    Car1.OutputDetails();
+    Car1.StartMoving();
+}
+
 int main()
 {
     TestPeople();
     TestAnimals();
     TestVehicles();
+    TestCars();
 }
