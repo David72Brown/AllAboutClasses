@@ -72,10 +72,29 @@ void TestCars(void)
     Car1.StartMoving();
 }
 
+void DemonstrateRunTimePolymorphism(void)
+{
+    // This function demonstrates run-time polymorphism (a.k.a. "dynamic polymorphism" or "late binding").
+    cVehicle v("Honda", 70);
+    cCar c("DadsCar", 30, "Citroen", 100);
+
+    cVehicle* pV;
+    pV = &v;
+    pV->OutputDetails();    // Calls cVehicle version of the OutputDetails() method.
+    pV = &c;
+    pV->OutputDetails();    // Calls cCar version of OutputDetails().
+
+    cCar* pC;
+    pC = &v;                // Won't compile. Comment this line out so you can run this function and see how it works.
+    pC = &c;
+    pC->OutputDetails();    // Calls cCar version of OutputDetails().
+}
+
 int main()
 {
     TestPeople();
-    TestAnimals();
+    TestAnimals();	// Will crash until it is implemented properly with a copy constructor. See cVehicle for solution.
     TestVehicles();
     TestCars();
+    DemonstrateRunTimePolymorphism();
 }
