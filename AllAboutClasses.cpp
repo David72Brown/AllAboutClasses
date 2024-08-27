@@ -30,6 +30,7 @@ void TestAnimals(void)
     cAnimal Rat;
     cAnimal Cat("Catty", 2);
 
+    // Will crash when function exits because this is a shallow copy so the Cat and Rat's names are using the same chunk of memory.
     Rat = Cat;
     Rat.SetInitial('R');
 
@@ -85,7 +86,7 @@ void DemonstrateRunTimePolymorphism(void)
     pV->OutputDetails();    // Calls cCar version of OutputDetails().
 
     cCar* pC;
-    pC = &v;                // Won't compile. Comment this line out so you can run this function and see how it works.
+//    pC = &v;              // !!! Won't compile. Comment this line out so you can run this function and see how it works.
     pC = &c;
     pC->OutputDetails();    // Calls cCar version of OutputDetails().
 }
